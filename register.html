@@ -8,104 +8,113 @@
     <!-- 引入css -->
     <link href="./css/bootstrap.css" rel="stylesheet" />
     <link href="./css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/bootstrapValidator.min.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet" />
     <link href="./css/login.css" rel="stylesheet" />
     <!-- 引入js -->
     <script src="./js/jquery.min.js"></script>
+    <script src="js/bootstrapValidator.min.js"></script>
     <script src="./js/bootstrap.js"></script>
     <title>注册</title>
 </head>
 
 <body class="text-center">
-       <!-- nav start -->
-       <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                        aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">小富博客</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse in" aria-expanded="false" style="height: 0px;">
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="#">首页</a>
-                        </li>
-                        <li>
-                            <a href="#about">博客标题一</a>
-                        </li>
-                        <li>
-                            <a href="#contact">标题二</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Something else here</a>
-                                </li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li>
-                                    <a href="#">Separated link</a>
-                                </li>
-                                <li>
-                                    <a href="#">One more separated link</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- <li>
+    <!-- nav start -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">小富博客</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse in" aria-expanded="false" style="height: 0px;">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="#about">博客标题一</a>
+                    </li>
+                    <li>
+                        <a href="#contact">标题二</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Action</a>
+                            </li>
+                            <li>
+                                <a href="#">Another action</a>
+                            </li>
+                            <li>
+                                <a href="#">Something else here</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li>
+                                <a href="#">Separated link</a>
+                            </li>
+                            <li>
+                                <a href="#">One more separated link</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li>
                             <a href="#">登录</a>
                         </li>
                         <li>
                             <a href="#">注册</span>
                             </a>
                         </li> -->
-                        <li>
-                            <a href="#">欢迎xxx</a>
-                        </li>
-                        <li>
-                            <a href="#">注销</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--/.nav-collapse -->
+                    <li>
+                        <a href="#">欢迎xxx</a>
+                    </li>
+                    <li>
+                        <a href="#">注销</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    
-        <!-- nav end -->
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <!-- nav end -->
 
 
     <!-- login start -->
     <div class="container container-small">
         <h2>注册
         </h2>
-        <form>
+        <form action="/" method="POST" id="form-register">
             <div class="form-group">
-                    <input type="text" class="form-control" placeholder="请输入用户名">
+                <input type="text" class="form-control" placeholder="请输入用户名" name="username">
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="请输入邮箱地址">
+                <input type="text" class="form-control" placeholder="请输入邮箱地址" name="email">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="请输入密码">
+                <input type="password" class="form-control" placeholder="请输入密码" name="password">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="请重复输入密码">
+                <input type="password" class="form-control" placeholder="请重复输入密码" name="password">
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-lg-3 control-label" id="captchaOperation"></label>
+                <input type="text" class="form-control" name="captcha" />
+
             </div>
             <div class="form-group">
                 <button class="btn btn-primary btn-block" type="submit">注册</button>
@@ -129,5 +138,23 @@
     </footer>
     <!-- footer end -->
 </body>
+<script>
+    $(document).ready(function () {
+        function randomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        };
+        $('#captchaOperation').html([randomNumber(1, 100), '+', randomNumber(1, 200), '='].join(' '));
+
+        $('#form-register').bootstrapValidator({
+            //        live: 'disabled',
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+        })
+
+</script>
 
 </html>
